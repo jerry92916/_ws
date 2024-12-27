@@ -1,3 +1,4 @@
+// 定義 layout 函式，生成基本的 HTML 頁面框架
 export function layout(title, content) {
     return `
     <html>
@@ -61,15 +62,16 @@ export function layout(title, content) {
     </body>
     </html>
     `
-  }
-  
-  export function list(posts) {
+}
+
+// 定義 list 函式，生成文章列表頁面
+export function list(posts) {
     let list = []
     for (let post of posts) {
-      const formattedDate = post.created_at;
+      const formattedDate = post.created_at; // 格式化日期
       list.push(`
       <li>
-        <h2>${ post.title }</h2>
+        <h2>${ post.title }</h2>
         <p><a href="/post/${post.id}">Read post</a></p>
         <p>Created at: ${formattedDate}</p>
       </li>
@@ -83,10 +85,11 @@ export function layout(title, content) {
       ${list.join('\n')}
     </ul>
     `
-    return layout('Posts', content)
-  }
-  
-  export function newPost() {
+    return layout('Posts', content) // 使用 layout 函式包裝內容
+}
+
+// 定義 newPost 函式，生成新增文章的表單頁面
+export function newPost() {
     return layout('New Post', `
     <h1>New Post</h1>
     <p>Create a new post.</p>
@@ -96,13 +99,14 @@ export function layout(title, content) {
       <p><input type="submit" value="Create"></p>
     </form>
     `)
-  }
-  
-  export function show(post) {
-    const formattedDate = post.created_at;
+}
+
+// 定義 show 函式，生成特定文章的顯示頁面
+export function show(post) {
+    const formattedDate = post.created_at; // 格式化日期
     return layout(post.title, `
       <h1>${post.title}</h1>
       <pre>${post.body}</pre>
-      <pre>created at${formattedDate}</pre>
+      <pre>created at ${formattedDate}</pre>
     `)
-  }
+}
