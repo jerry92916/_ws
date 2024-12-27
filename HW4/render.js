@@ -4,20 +4,21 @@ export function layout(title, content) {
     <head>
       <title>${title}</title>
       <style>
+        /* 設定頁面樣式 */
         body {
           padding: 80px;
           font: 16px Helvetica, Arial;
         }
     
         h1 {
-          font-size: 2em;
+          font-size: 2em; /* 標題大小 */
         }
     
         h2 {
-          font-size: 1.2em;
+          font-size: 1.2em; /* 副標題大小 */
         }
         h3 {
-          font-size: 1em;
+          font-size: 1em; /* 次標題大小 */
         }
     
         #posts {
@@ -29,17 +30,17 @@ export function layout(title, content) {
           margin: 40px 0;
           padding: 0;
           padding-bottom: 20px;
-          border-bottom: 1px solid #eee;
-          list-style: none;
+          border-bottom: 1px solid #eee; /* 每篇文章分隔線 */
+          list-style: none; /* 移除項目符號 */
         }
     
         #posts li:last-child {
-          border-bottom: none;
+          border-bottom: none; /* 最後一篇文章無分隔線 */
         }
     
         textarea {
           width: 500px;
-          height: 300px;
+          height: 300px; /* 設定文字區域大小 */
         }
     
         input[type=text],input[type=password],
@@ -47,13 +48,13 @@ export function layout(title, content) {
           border: 1px solid #eee;
           border-top-color: #ddd;
           border-left-color: #ddd;
-          border-radius: 2px;
+          border-radius: 2px; /* 設定圓角 */
           padding: 15px;
           font-size: .8em;
         }
     
         input[type=text],input[type=password] {
-          width: 500px;
+          width: 500px; /* 設定文字輸入框寬度 */
         }
       </style>
     </head>
@@ -65,6 +66,8 @@ export function layout(title, content) {
     </html>
     `
   }
+
+  // 用於顯示使用者貼文列表的函數
   export function listUserPosts(posts, user,allposts) {
     console.log('listUserPost: user=', user)
     let list = []
@@ -96,7 +99,8 @@ export function layout(title, content) {
     `
     return layout('Post', content)
   }
-  
+
+  // 用於顯示登入介面的函數
   export function loginUi() {
     return layout('Login', `
     <h1>Login</h1>
@@ -108,7 +112,8 @@ export function layout(title, content) {
     </form>
     `)
   }
-  
+
+  // 用於顯示註冊介面的函數
   export function signupUi() {
     return layout('Signup', `
     <h1>Signup</h1>
@@ -120,21 +125,24 @@ export function layout(title, content) {
     </form>
     `)
   }
-  
+
+  // 用於顯示成功訊息的函數
   export function success() {
     return layout('Success', `
     <h1>Success!</h1>
     You may <a href="/">read all Post</a> / <a href="/login">login</a> again !
     `)
   }
-  
+
+  // 用於顯示失敗訊息的函數
   export function fail() {
     return layout('Fail', `
     <h1>Fail!</h1>
     You may <a href="/">read all Post</a> or <a href="JavaScript:window.history.back()">go back</a> !
     `)
   }
-  
+
+  // 用於顯示所有貼文的函數
   export function list(posts, user) {
     console.log('list: user=', user)
     let list = []
@@ -156,7 +164,8 @@ export function layout(title, content) {
     `
     return layout('Posts', content)
   }
-  
+
+  // 用於顯示新增貼文介面的函數
   export function newPost() {
     return layout('New Post', `
     <h1>New Post</h1>
@@ -167,9 +176,9 @@ export function layout(title, content) {
       <p><input type="submit" value="Create"></p>
     </form>
     `)
-  
   }
-  
+
+  // 用於顯示單篇貼文的函數
   export function show(post) {
     return layout(post.title, `
       <h1>${post.title} -- by ${post.username}</h1>
