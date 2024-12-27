@@ -1,4 +1,5 @@
-export function layout(user,title, content) {
+// 定義 layout 函數，這是一個通用的模板函數，用於生成 HTML 頁面
+export function layout(user, title, content) {
     return `
     <html>
     <head>
@@ -62,22 +63,25 @@ export function layout(user,title, content) {
     </body>
     </html>
     `
-  }
-  export function userList(users) {
+}
+
+// 定義 userList 函數，用於生成使用者列表的 HTML 頁面
+export function userList(users) {
     let listHtml = []
     for (let user of users) {
         listHtml.push(`<li><a href="/${user}/">${user}</a></li>`)
     }
 
     return layout('', 'User List', `<ol>${listHtml.join('\n')}</ol>`)
-  }
+}
   
-  export function list(user,posts) {
+// 定義 list 函數，用於生成使用者的文章列表的 HTML 頁面
+export function list(user, posts) {
     let list = []
     for (let post of posts) {
       list.push(`
       <li>
-        <h2>${ post.title }</h2>
+        <h2>${ post.title }</h2>
         <p><a href="/${user}/post/${post.id}">Read post</a></p>
       </li>
       `)
@@ -90,11 +94,12 @@ export function layout(user,title, content) {
       ${list.join('\n')}
     </ul>
     `
-    return layout(user,'Posts', content)
-  }
+    return layout(user, 'Posts', content)
+}
   
-  export function newPost(user) {
-    return layout('New Post', user,`
+// 定義 newPost 函數，用於生成新文章的 HTML 表單頁面
+export function newPost(user) {
+    return layout('New Post', user, `
     <h1>New Post</h1>
     <p>Create a new post.</p>
     <form action="/${user}/post" method="post">
@@ -103,12 +108,12 @@ export function layout(user,title, content) {
       <p><input type="submit" value="Create"></p>
     </form>
     `)
-  }
+}
   
-  export function show(user,post) {
-    return layout(user,post.title, `
+// 定義 show 函數，用於生成單篇文章的 HTML 頁面
+export function show(user, post) {
+    return layout(user, post.title, `
       <h1>${post.title}</h1>
       <p>${post.body}</p>
-     
     `)
-  }
+}
