@@ -1,4 +1,3 @@
-// 定義 layout 函式，生成基本的 HTML 頁面框架
 export function layout(title, content) {
     return `
     <html>
