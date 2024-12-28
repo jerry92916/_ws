@@ -66,7 +66,7 @@ async function show(ctx) {
 
 // 處理新增文章的請求
 async function create(ctx) {
-  const user = ctx.params.user || 'jerry'; // 獲取使用者名稱
+  const user = ctx.params.user || 'jerry'; // 獲取使用者名稱，為'jerry'
   const body = ctx.request.body();       // 獲取請求體
   if (body.type === "form") {           // 確保請求內容為表單類型
     const pairs = await body.form();
