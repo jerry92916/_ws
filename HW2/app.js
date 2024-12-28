@@ -19,7 +19,7 @@ router.get('/', list)              // 顯示文章列表
 // 建立應用程序實例
 const app = new Application();
 app.use(router.routes());         // 使用路由器的路由
-app.use(router.allowedMethods()); // 允許的方法，例如 GET、POST 等
+app.use(router.allowedMethods()); // 允許的方法
 
 // 處理顯示文章列表的請求
 async function list(ctx) {
@@ -56,6 +56,5 @@ async function create(ctx) {
   }
 }
 
-// 啟動伺服器，監聽 8000 埠
 console.log('Server run at http://127.0.0.1:8000');
 await app.listen({ port: 8000 });
