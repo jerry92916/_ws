@@ -22,7 +22,7 @@
 參考老師給的教材，有用CHATGPT去debug，之後我有把程式碼加上註解  
 [HW3](https://github.com/jerry92916/_ws/tree/master/HW3)  
 ## 習題四  
-參考老師給的教材，有用CHATGPT去debug，之後我有把程式碼加上註解  
+參考老師給的教材，也有參考同學的程式碼後，用CHATGPT去debug，最後把程式碼加上註解  
 [HW4](https://github.com/jerry92916/_ws/tree/master/HW4)
 ## 習題五
 選擇04b-formBlog/blog範例  
