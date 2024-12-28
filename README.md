@@ -20,4 +20,5 @@
 ## 習題四  
 [HW4](https://github.com/jerry92916/_ws/tree/master/HW4)
 ## 習題五
+選擇04b-formBlog/blog範例  
 [HW5-對話紀錄](https://chatgpt.com/c/67647fe0-270c-800f-8230-cd4f4a64197a?fbclid=IwZXh0bgNhZW0CMTAAAR13GP3krp-VA3Lsu9To5xf4o5SpgUnvMxKoyOl7ApVyxHIs4LN5fCIm1qI_aem_MxUDS5IWGGQg8rRE5nGSfQ)
