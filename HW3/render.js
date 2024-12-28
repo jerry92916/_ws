@@ -1,4 +1,3 @@
-// 定義 layout 函數，這是一個通用的模板函數，用於生成 HTML 頁面
 export function layout(user, title, content) {
     return `
     <html>
