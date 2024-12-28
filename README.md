@@ -10,7 +10,8 @@
 課程教材 | [網站設計教材](https://github.com/ccc113a/_ws)
 # 期中作業
 # 期末作業
-## 習題一  
+## 習題一 
+用老師上課給的範例下去修改  
 [HW1](https://github.com/jerry92916/_ws/blob/master/HW1/oakMe.js)  
 ## 習題二  
 [HW2](https://github.com/jerry92916/_ws/tree/master/HW2)
