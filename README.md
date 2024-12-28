@@ -9,6 +9,7 @@
 學校科系 | [金門大學資訊工程系](https://www.nqu.edu.tw/educsie/index.php)
 課程教材 | [網站設計教材](https://github.com/ccc113a/_ws)
 # 期中作業
+[分散式阻斷服務攻擊報告PPT](https://github.com/jerry92916/_ws/blob/master/%E5%88%86%E6%95%A3%E5%BC%8F%E9%98%BB%E6%96%B7%E6%9C%8D%E5%8B%99%E6%94%BB%E6%93%8A.pptx)
 # 期末作業
 ## 習題一 
 用老師上課給的範例下去修改  
